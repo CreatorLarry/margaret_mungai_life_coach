@@ -682,7 +682,7 @@ h4 {
     display: flex;
     gap: 1rem;
     font-size: 1.4rem;
-    margin-top: 0.5rem;
+    margin: 0;
 }
 
 .social-icons a {
