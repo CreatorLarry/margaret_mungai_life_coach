@@ -61,9 +61,9 @@ h4 {
 
 :root {
     --color-navbar-bg: rgba(255, 255, 255, 0.8);
-    --color-navbar-text: #2c2c2c;
+    --color-navbar-text: #AE8F65;
     --color-navbar-blur: blur(10px);
-    --color-navbar-hover: #764ba2;
+    --color-navbar-hover: #846745;
 }
 
 .custom-navbar {
@@ -325,7 +325,7 @@ h4 {
 
 @keyframes pulseBorder {
     0% {
-        box-shadow: 0 0 0 0 rgba(223, 106, 206, 0.5);
+        box-shadow: 0 0 0 0 rgba(182, 157, 49, 0.5);
     }
 
     70% {
@@ -407,7 +407,7 @@ h4 {
 
 .about-image-border {
     padding: 2px;
-    background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
+    /* background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end)); */
     border-radius: 30px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
     display: flex;
@@ -417,7 +417,7 @@ h4 {
 
 .about-image {
     width: 100%;
-    height: 100%;
+    height: 80%;
     border-radius: 30px;
     object-fit: cover;
     border: 2px solid white;
@@ -488,6 +488,47 @@ h4 {
     }
 }
 
+.story-section {
+    background-color: var(--color-white);
+    padding: 5rem 0;
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+.story-content h3 {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: var(--color-accent-dark);
+    font-family: var(--font-heading);
+}
+
+.story-content ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-content ul li {
+    margin-bottom: 0.6rem;
+    list-style: disc;
+}
+
+.story-content blockquote {
+    font-style: italic;
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background-color: #f9f6ff;
+    border-left: 4px solid var(--color-accent);
+    color: var(--color-accent-dark);
+}
+
+
 
 /* Services */
 .services-grid {
@@ -534,8 +575,123 @@ h4 {
 
 
 /* Testimonials */
-.testimonial {
-    border-left: 4px solid var(--color-accent);
+.testimonials-section {
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.85)),
+        url('../images/testimonials.png') center/cover no-repeat;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background-color: var(--color-white);
+    border-radius: 1.5rem;
+    padding: 2rem 2rem 2.5rem;
+    position: relative;
+    box-shadow: 0 12px 30px rgba(92, 77, 125, 0.05);
+    transition: all 0.3s ease;
+    text-align: left;
+    border: 1px solid rgba(92, 77, 125, 0.08);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 40px rgba(92, 77, 125, 0.12);
+}
+
+.testimonial-card p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-name {
+    background-color: var(--color-accent);
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.quote-icon {
+    color: var(--color-accent);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section {
+    background-color: #fcfcfc;
+    padding: 5rem 2rem;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: white;
+    font-family: var(--font-primary);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(92, 77, 125, 0.1);
+}
+
+.contact-details p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-details a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    color: var(--color-accent);
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--color-accent-dark);
 }
 
 
@@ -547,7 +703,9 @@ h4 {
     background: #25d366;
     color: white;
     font-size: 1.8rem;
-    padding: 15px;
+    padding: 0 9px;
+    height: auto;
+    width: auto;
     border-radius: 50%;
     z-index: 999;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
