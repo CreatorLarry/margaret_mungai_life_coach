@@ -260,6 +260,36 @@
         </svg>
     </div>
 
+    <section class="image-tags-section">
+        <div class="container">
+            <h2 class="section-title">A Glimpse Into the Journey</h2>
+            <div class="image-tag-grid">
+                <div class="tag-image">
+                    <img src="images/image-1.jpeg" alt="Clarity" />
+                    <div class="tag-overlay">Clarity</div>
+                </div>
+                <div class="tag-image">
+                    <img src="images/image-5.jpeg" alt="Courage" />
+                    <div class="tag-overlay">Courage</div>
+                </div>
+                <div class="tag-image">
+                    <img src="images/image-3.jpeg" alt="Healing" />
+                    <div class="tag-overlay">Healing</div>
+                </div>
+                <div class="tag-image">
+                    <img src="images/image-4.jpeg" alt="Transformation" />
+                    <div class="tag-overlay">Transformation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,0 C720,100 720,0 1440,100 L1440,00 L0,0 Z" fill="#fff" />
+        </svg>
+    </div>
+
 
     <!-- Contact / CTA -->
     <section class="contact-section" id="contact">
@@ -312,22 +342,58 @@
     </a>
 
 
+    <div class="section-divider">
+        <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,0 C720,100 720,0 1440,100 L1440,00 L0,0 Z" fill="#fff" />
+        </svg>
+    </div>
+
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <div class="container">
-            <p class="mb-1">Follow Margaret:</p>
-            <div class="social-links mb-2">
-                <a href="https://www.instagram.com/madgemungai/" class="text-white me-3"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/madgemungai/" class="text-white me-3"><i
-                        class="fab fa-facebook"></i></a>
-                <a href="https://www.tiktok.com/@madgemungai" class="text-white me-3"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.linkedin.com/in/mindsetcoachmargaretmungai" class="text-white"><i
-                        class="fab fa-linkedin"></i></a>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>Margaret Mungai</h3>
+                <p>Helping you reset, reclaim and rise with clarity, confidence, and purpose.</p>
             </div>
-            <p>&copy; 2025 Margaret Mungai. All rights reserved.</p>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">My Story</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/madgemungai/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/madgemungai/" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@madgemungai" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/in/mindsetcoachmargaretmungai" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Margaret Mungai. All rights reserved.</p>
+            <p class="dev-credit small">Developed with ❤️ by <a href="https://www.instagram.com/art_your_dreams_designs?igsh=MWt6aDZqOG9nZzA2bg==" target="_blank">Art
+                    Your Dreams</a></p>
         </div>
     </footer>
+
+
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>

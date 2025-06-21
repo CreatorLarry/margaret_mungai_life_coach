@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 /* Define theme colors and fonts at the root level */
 :root {
@@ -630,8 +631,74 @@ h4 {
     margin-bottom: 1rem;
 }
 
+
+.image-tags-section {
+    padding: 5rem 2rem;
+    background-color: var(--color-bg);
+    text-align: center;
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)),
+        url('../images/pictorial-bg-01.jpg') center/cover no-repeat;
+}
+
+.image-tags-section .section-title {
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    margin-bottom: 2.5rem;
+    color: var(--color-accent);
+}
+
+.image-tag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.tag-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease;
+}
+
+.tag-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.tag-image:hover img {
+    transform: scale(1.05);
+}
+
+.tag-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    font-family: var(--font-primary);
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease;
+}
+
+.tag-image:hover .tag-overlay {
+    background: var(--color-accent-dark);
+}
+
 .contact-section {
-    background-color: #fcfcfc;
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)),
+        url('../images/contact-bg.jpg') center/cover no-repeat;
     padding: 5rem 2rem;
 }
 
@@ -680,9 +747,9 @@ h4 {
 
 .social-icons {
     display: flex;
-    gap: 1rem;
     font-size: 1.4rem;
     margin: 0;
+    color: #AE8F65;
 }
 
 .social-icons a {
@@ -709,4 +776,101 @@ h4 {
     border-radius: 50%;
     z-index: 999;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.site-footer {
+    background: #AE8F65;
+    color: var(--color-white);
+    padding: 4rem 2rem 2rem;
+    font-size: 0.95rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    align-items: start;
+}
+
+.footer-brand h3 {
+    font-family: var(--font-heading-brand);
+    font-size: 1.7rem;
+    margin-bottom: 0.6rem;
+    color: var(--color-white);
+}
+
+.footer-brand p {
+    max-width: 320px;
+    color: #fdfdfd;
+    line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 1.2rem;
+}
+
+.footer-links ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--color-gradient-start);
+}
+
+.social-icons a {
+    color: #f8f8f8;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--color-gradient-end);
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #f1f1f1;
+}
+
+.footer-bottom .dev-credit {
+    margin-top: 0.3rem;
+    font-style: italic;
+    font-size: 0.7rem;
+    /* Reduced from 0.9rem */
+    opacity: 0.7;
+    /* More subtle */
+}
+
+.footer-bottom .dev-credit a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.footer-bottom .dev-credit a:hover {
+    color: var(--color-gradient-start);
+    text-decoration: underline;
 }
