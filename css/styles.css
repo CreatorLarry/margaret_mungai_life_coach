@@ -1,21 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
 /* Define theme colors and fonts at the root level */
 :root {
     --font-primary: 'Lato', sans-serif;
     --font-heading: 'Playfair Display', serif;
+    --font-heading-brand: 'Alex Brush', serif;
 
-    --color-text: #333;
+    --color-text: #846745;
     --color-bg: #fefefe;
 
-    --color-accent: #5C4D7D;
-    --color-accent-dark: #4a3b65;
-    --color-gradient-start: #7e5bef;
-    --color-gradient-end: #df6ace;
+    --color-accent: #D7C4A0;
+    --color-accent-dark: #CIAB85;
+    --color-gradient-start: #AE8F65;
+    --color-gradient-end: #9A8365;
 
     --color-navbar: #ffede7;
     --color-white: #fff;
 
     --color-overlay: rgba(0, 0, 0, 0.4);
 }
+
+a.btn-primary,
+a.btn-outline,
+.btn-primary,
+.btn-outline {
+    text-decoration: none;
+}
+
 
 /* Base styles */
 body {
@@ -75,7 +86,7 @@ h4 {
 }
 
 .custom-navbar .brand {
-    font-family: var(--font-heading);
+    font-family: var(--font-heading-brand);
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--color-navbar-text);
@@ -360,6 +371,13 @@ h4 {
     }
 }
 
+@media (max-width: 422px) {
+    .hero-image-border {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 
 
 /* About */
@@ -431,8 +449,8 @@ h4 {
     }
 
     .about-image-border {
-        width: 200px;
-        height: 200px;
+        width: 500px;
+        height: 400px;
         margin-bottom: 1.5rem;
     }
 
@@ -446,17 +464,74 @@ h4 {
 }
 
 
+@media (max-width: 526px) {
+    .about-image-border {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 426px) {
+    .about-image-border {
+        width: 250px;
+        height: 200px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 330px) {
+    .about-image-border {
+        width: 250px;
+        height: 200px;
+        margin-bottom: 1.5rem;
+    }
+}
+
 
 /* Services */
-.service-box {
-    background: var(--color-white);
-    transition: 0.3s ease;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
 }
 
-.service-box:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
+.service-card {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-card .icon {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    color: var(--color-accent-dark);
+    margin-bottom: 0.6rem;
+    font-family: var(--font-heading);
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
 
 /* Testimonials */
 .testimonial {
