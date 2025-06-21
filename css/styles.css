@@ -353,6 +353,15 @@ h4 {
 }
 
 
+@media (max-width: 422px) {
+    .hero-image-border {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+
 /* About */
 .about-section {
     padding: 4rem 0;
