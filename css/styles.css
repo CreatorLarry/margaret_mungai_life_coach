@@ -97,7 +97,7 @@ h4 {
     font-family: var(--font-heading-brand);
     font-weight: 700;
     font-size: 1.5rem;
-    color: var(--color-navbar-text);
+    color: var(--color-text);
     text-decoration: none;
 }
 
@@ -110,7 +110,7 @@ h4 {
 }
 
 .nav-links li a {
-    color: var(--color-navbar-text);
+    color: var(--color-text);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
@@ -122,7 +122,7 @@ h4 {
 
 .nav-links .social-icons a {
     font-size: 1.2rem;
-    color: var(--color-navbar-text);
+    color: var(--color-text);
     margin-left: 0.8rem;
 }
 
@@ -210,7 +210,7 @@ h4 {
     .menu-toggle .bar {
         height: 3px;
         width: 24px;
-        background-color: var(--color-navbar-text);
+        background-color: var(--color-text);
         border-radius: 2px;
         transition: all 0.3s ease;
     }
@@ -236,15 +236,23 @@ h4 {
 
 
 /* Hero Section */
-.hero-fullscreen {
+.hero-section {
     position: relative;
     height: 100vh;
-    width: 100%;
-    background: url('../images/hero3-edited.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    color: #fff;
+    overflow: hidden;
+    color: var(--color-white);
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/hero3-edited.jpg') center center/cover no-repeat;
+    z-index: 1;
 }
 
 .hero-overlay {
@@ -253,72 +261,73 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.55);
-    /* dark overlay */
-    display: flex;
-    align-items: center;
-    padding: 0 2rem;
+    background: rgba(2, 0, 0, 0.6);
+    /* Dark overlay for readability */
+    z-index: 2;
 }
 
 .hero-content {
-    max-width: 600px;
+    position: relative;
+    z-index: 3;
+    max-width: 700px;
+    padding: 2rem;
 }
 
-.hero-content .subheading {
+.hero-subtitle {
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     font-size: 0.85rem;
-    color: #e0e0e0;
+    color: var(--color-text);
     margin-bottom: 1rem;
 }
 
-.hero-content h1 {
-    font-size: 2.8rem;
-    line-height: 1.3;
-    font-weight: 700;
-    margin-bottom: 1rem;
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
     font-family: var(--font-heading);
+    margin-bottom: 1rem;
+    color: #ddd;
 }
 
-.hero-content p {
+.hero-text {
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
-.hero-content .btn {
+.btn-outline-light {
     padding: 0.6rem 1.4rem;
-    font-weight: 600;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    color: #fff;
     border: 2px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
-.hero-content .btn:hover {
+.btn-outline-light:hover {
     background-color: var(--color-gradient-end);
     border-color: var(--color-gradient-end);
     color: #fff;
 }
 
-/* Responsive Adjustments */
+/* Responsive Styling */
 @media (max-width: 768px) {
-    .hero-content h1 {
+    .hero-title {
         font-size: 2rem;
     }
 
-    .hero-content p {
+    .hero-text {
         font-size: 1rem;
     }
 
-    .hero-fullscreen {
-        justify-content: center;
-        text-align: center;
-    }
-
     .hero-content {
+        text-align: center;
         max-width: 90%;
+        margin: 0 auto;
     }
 }
+
 
 
 
@@ -392,7 +401,7 @@ h4 {
 
     .about-image-border {
         width: 500px;
-        height: 400px;
+        height: 700px;
         margin-bottom: 1.5rem;
     }
 
@@ -409,7 +418,7 @@ h4 {
 @media (max-width: 526px) {
     .about-image-border {
         width: 300px;
-        height: 300px;
+        height: 500px;
         margin-bottom: 1.5rem;
     }
 }
@@ -417,7 +426,7 @@ h4 {
 @media (max-width: 426px) {
     .about-image-border {
         width: 250px;
-        height: 200px;
+        height: 350px;
         margin-bottom: 1.5rem;
     }
 }
@@ -425,7 +434,7 @@ h4 {
 @media (max-width: 330px) {
     .about-image-border {
         width: 250px;
-        height: 200px;
+        height: 350px;
         margin-bottom: 1.5rem;
     }
 }
@@ -645,7 +654,7 @@ h4 {
 
 .contact-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
     gap: 3rem;
     margin-top: 3rem;
 }
@@ -693,7 +702,7 @@ h4 {
     color: #AE8F65;
 }
 
-.social-icons a {
+.contact-section .social-icons a {
     color: var(--color-accent);
     transition: color 0.3s ease;
 }
