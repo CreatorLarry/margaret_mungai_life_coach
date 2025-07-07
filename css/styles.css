@@ -232,7 +232,7 @@ h4 {
 }
 
 
-.about-container-unstuck{
+.about-container-unstuck {
     margin-top: 50px;
 }
 
@@ -928,4 +928,64 @@ h4 {
 .footer-bottom .dev-credit a:hover {
     color: var(--color-gradient-start);
     text-decoration: underline;
+}
+
+.gallery-filters {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background: var(--color-white);
+    color: var(--color-accent-dark);
+    border: 2px solid var(--color-accent);
+    padding: 0.5rem 1.2rem;
+    margin: 0.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--color-gradient-start);
+    color: white;
+    border-color: var(--color-gradient-start);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.caption {
+    display: block;
+    padding: 0.5rem 0.5rem 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text);
+    text-align: center;
 }

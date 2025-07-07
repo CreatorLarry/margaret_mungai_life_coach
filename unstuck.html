@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
 
 
 </head>
@@ -155,6 +156,69 @@
         </svg>
     </div>
 
+    <!-- Pictorial Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Program Moments</h2>
+
+            <!-- Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="retreats">Retreats</button>
+                <button class="filter-btn" data-filter="teambuilding">Team Building</button>
+                <button class="filter-btn" data-filter="forums">Forums</button>
+            </div>
+
+            <!-- Gallery -->
+            <div id="lightgallery" class="gallery-grid">
+                <!-- RETREATS -->
+                <a href="images/retreat3.jpg" class="gallery-item retreats">
+                    <img src="images/retreat3.jpg" alt="Retreat" />
+                </a>
+                <a href="images/retreat2.jpg" class="gallery-item retreats">
+                    <img src="images/retreat2.jpg" alt="Retreat" />
+                </a>
+                <a href="images/retreat4.jpg" class="gallery-item retreats">
+                    <img src="images/retreat4.jpg" alt="Retreat" />
+                </a>
+                <a href="images/retreat5.jpg" class="gallery-item retreats">
+                    <img src="images/retreat5.jpg" alt="Retreat" />
+                </a>
+
+                <!-- TEAM BUILDING -->
+                <a href="images/team1.jpg" class="gallery-item teambuilding">
+                    <img src="images/team1.jpg" alt="Team Building" />
+                </a>
+                <a href="images/team2.jpg" class="gallery-item teambuilding">
+                    <img src="images/team2.jpg" alt="Team Building" />
+                </a>
+                <a href="images/team3.jpg" class="gallery-item teambuilding">
+                    <img src="images/team3.jpg" alt="Team Building" />
+                </a>
+
+                <!-- FORUMS -->
+                <a href="images/forum1.jpg" class="gallery-item forums">
+                    <img src="images/forum1.jpg" alt="Forum" />
+                </a>
+                <a href="images/forum2.jpg" class="gallery-item forums">
+                    <img src="images/forum2.jpg" alt="Forum" />
+                </a>
+                <a href="images/forum3.jpg" class="gallery-item forums">
+                    <img src="images/forum3.jpg" alt="Forum" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="section-divider">
+        <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,0 C720,100 720,0 1440,100 L1440,00 L0,0 Z" fill="#fff" />
+        </svg>
+    </div>
+
 
     <!-- Contact / CTA -->
     <section class="contact-section" id="contact">
@@ -264,6 +328,11 @@
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
+    <!-- LightGallery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
