@@ -232,8 +232,19 @@ h4 {
 }
 
 
+.about-container-unstuck{
+    margin-top: 50px;
+}
 
-
+.hero-bg-unstuck {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/new-5.jpg') center center/cover no-repeat;
+    z-index: 1;
+}
 
 /* Hero Section */
 .hero-section {
