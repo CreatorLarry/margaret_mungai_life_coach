@@ -15,19 +15,34 @@ const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 const body = document.body;
 
+// Toggle menu
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
   body.classList.toggle("nav-open");
   menuToggle.classList.toggle("open");
 });
 
+// Close on outside click
 document.addEventListener("click", (e) => {
   if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
-    navLinks.classList.remove("active");
-    body.classList.remove("nav-open");
-    menuToggle.classList.remove("open");
+    closeMenu();
   }
 });
+
+// Close when a nav link is clicked
+const navItems = navLinks.querySelectorAll("a");
+navItems.forEach(link => {
+  link.addEventListener("click", () => {
+    closeMenu();
+  });
+});
+
+// Close menu function
+function closeMenu() {
+  navLinks.classList.remove("active");
+  body.classList.remove("nav-open");
+  menuToggle.classList.remove("open");
+}
 
 
 // Shrink navbar on scroll
