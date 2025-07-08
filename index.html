@@ -32,8 +32,15 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="unstuck.html">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
+                <li class="dropdown">
+                    <a href="#services">Services <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#services">All Services</a></li>
+                        <li><a href="#brochures">Resources</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="#gallery">Pictorial</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="social-icons">
@@ -131,8 +138,9 @@
             <div class="about-content">
                 <h2>From Stuck to Unstoppable</h2>
                 <p>
-                    Hey, my name is Margaret Mungai. I&#39;m a Transformational Life Coach, Trainer, Speaker, and
-                    the <strong>founder of The Unstuck Woman Program</strong>. I help individuals and teams who feel
+                    Hey, my name is Margaret Mungai. I&#39;m a <strong>Transformational Life Coach, Trainer, Speaker,
+                        and
+                        the founder of The Unstuck Woman Program</strong>. I help individuals and teams who feel
                     stuck,
                     unseen, and disconnected from their purpose to reclaim their voice, rebuild their identity,
                     and create a life rooted in clarity, confidence, and freedom.
@@ -233,6 +241,38 @@
     </div>
 
 
+    <section id="brochures" class="brochure-section">
+        <div class="container">
+            <h2 class="section-title">Download Resources</h2>
+            <div class="brochure-grid">
+
+                <div class="brochure-card">
+                    <i class="fas fa-file-pdf brochure-icon"></i>
+                    <div>
+                        <h4>Coaching Programs Overview</h4>
+                        <a href="brochures/programs.pdf" download class="btn-outline">Download PDF</a>
+                    </div>
+                </div>
+
+                <div class="brochure-card">
+                    <i class="fas fa-file-pdf brochure-icon"></i>
+                    <div>
+                        <h4>Wellness Retreats Brochure</h4>
+                        <a href="brochures/retreats.pdf" download class="btn-outline">Download PDF</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="section-divider">
+        <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,0 C720,100 720,0 1440,100 L1440,00 L0,0 Z" fill="#fff" />
+        </svg>
+    </div>
+
 
     <!-- Testimonials Section -->
     <section class="testimonials-section" id="testimonials">
@@ -272,33 +312,65 @@
 
     <section class="image-tags-section">
         <div class="container">
-            <h2 class="section-title">A Glimpse Into the Journey</h2>
+            <h2 class="section-title">Unstuck Woman Program</h2>
             <div class="image-tag-grid">
+
                 <div class="tag-image">
                     <img src="images/new-1.jpg" alt="Clarity" />
-                    <div class="tag-overlay">Clarity</div>
+                    <div class="tag-overlay">
+                        <p>I help individuals and teams who feel stuck, unseen, or disconnected from their purpose
+                            reclaim their voice, rebuild their confidence, and create a life rooted in clarity and
+                            freedom.</p>
+                        <br>
+                        <p class="tag-mini-caption"><em>Does your life feel like it no longer belongs to you?</em></p>
+                    </div>
                 </div>
+
                 <div class="tag-image">
                     <img src="images/new-2.jpg" alt="Courage" />
-                    <div class="tag-overlay">Courage</div>
+                    <div class="tag-overlay">
+                        <p>My approach blends science, psychology, spirituality, and soulful self-awareness to support
+                            clients through identity shift, emotional healing, goal-setting, self-mastery, and the
+                            release of limiting beliefs.</p>
+                        <br>
+                        <p class="tag-mini-caption"><em>Courage is a decision.</em></p>
+                    </div>
                 </div>
+
                 <div class="tag-image">
                     <img src="images/new-3.jpg" alt="Healing" />
-                    <div class="tag-overlay">Healing</div>
+                    <div class="tag-overlay">
+                        <p>Whether you’re navigating burnout, going through a major life transition, or feeling stuck in
+                            a loop of old patterns, my coaching offers the safety, structure, and support you need to
+                            reset, heal, and rise</p>
+                        <br>
+                        <p class="tag-mini-caption"><em>So you can feel seen, empowered, and free to live life on your
+                                own terms.</em></p>
+                    </div>
                 </div>
+
                 <div class="tag-image">
                     <img src="images/new-4.jpg" alt="Transformation" />
-                    <div class="tag-overlay">Transformation</div>
+                    <div class="tag-overlay">
+                        <p>Transformation comes when you finally choose to rise — not as who you were, but as who you
+                            were meant to be.</p>
+                        <br>
+                        <p class="tag-mini-caption"><em>This is your becoming.</em></p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
+
+
 
     <div class="section-divider">
         <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
             <path d="M0,0 C720,100 720,0 1440,100 L1440,00 L0,0 Z" fill="#fff" />
         </svg>
     </div>
+
 
     <!-- Pictorial Section -->
     <section class="gallery-section" id="gallery">

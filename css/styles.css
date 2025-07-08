@@ -687,67 +687,56 @@ h4 {
 }
 
 
-.image-tags-section {
-    padding: 5rem 2rem;
-    background-color: var(--color-bg);
-    text-align: center;
-    background:
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.85)),
-        url('../images/pictorial-bg-01.jpg') center/cover no-repeat;
-}
-
-.image-tags-section .section-title {
-    font-size: 2rem;
-    font-family: var(--font-heading);
-    margin-bottom: 2.5rem;
-    color: var(--color-accent);
-}
-
 .image-tag-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
-    justify-items: center;
 }
 
 .tag-image {
     position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 420px;
+    border-radius: 12px;
     overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
 }
 
 .tag-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    border-radius: 20px;
-    transition: transform 0.4s ease;
-}
-
-.tag-image:hover img {
-    transform: scale(1.05);
 }
 
 .tag-overlay {
     position: absolute;
-    bottom: 15px;
-    left: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-    font-family: var(--font-primary);
-    letter-spacing: 0.5px;
-    transition: background 0.3s ease;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 1rem;
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    text-align: left;
 }
 
-.tag-image:hover .tag-overlay {
-    background: var(--color-accent-dark);
+.tag-overlay p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--color-text);
+    line-height: 1.4;
+}
+
+.tag-mini-caption {
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--color-accent-dark);
+    margin-top: 0.4rem;
+    display: block;
 }
 
 .contact-section {
@@ -816,6 +805,27 @@ h4 {
     color: var(--color-accent-dark);
 }
 
+.brochure-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.brochure-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.2rem;
+    background: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.brochure-icon {
+    font-size: 2.5rem;
+    color: var(--color-accent);
+}
+
 
 
 .whatsapp-float {
@@ -832,6 +842,65 @@ h4 {
     z-index: 999;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Dropdown Styles */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-white);
+    border-radius: 6px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 999;
+    padding: 0.5rem 0;
+}
+
+.nav-links .dropdown-menu li {
+    margin: 0;
+}
+
+.nav-links .dropdown-menu a {
+    padding: 0.5rem 1rem;
+    display: block;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.nav-links .dropdown-menu a:hover {
+    background: var(--color-navbar);
+    color: var(--color-accent-dark);
+}
+
+/* Show dropdown on hover (for desktop) */
+.nav-links .dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* Mobile dropdown toggle */
+@media (max-width: 991px) {
+    .nav-links .dropdown-menu {
+        position: relative;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .nav-links .dropdown-menu a {
+        padding-left: 2rem;
+    }
+
+    .nav-links .dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+}
+
 
 .site-footer {
     background: #AE8F65;
