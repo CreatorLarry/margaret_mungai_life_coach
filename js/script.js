@@ -82,3 +82,4 @@ lightGallery(document.getElementById('lightgallery'), {
   speed: 400,
   thumbnail: true
 });
+
